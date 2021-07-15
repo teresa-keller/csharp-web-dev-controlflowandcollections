@@ -1,12 +1,18 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace ListExercises
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Lists!");
+            static int sumOfEvens(List<double>)
+            {
+                int totalEvens = 0;
+
+                return totalEvens;
+            }
+
         }
     }
 }
