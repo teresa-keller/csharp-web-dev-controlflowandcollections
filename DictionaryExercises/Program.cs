@@ -19,7 +19,28 @@ namespace DictionaryExercises
                 Console.WriteLine("Student ID: ");
                 string input = Console.ReadLine();
                 newStudent = double.Parse(input);
+            
+
+                if(!Equals(newStudent, ""))
+                {
+                    Console.WriteLine("Student name: ");
+                    string studentName = Console.ReadLine();
+                    students.Add(newStudent, studentName);
+
+                    // Read in the newline before looping back
+                    Console.ReadLine();
+                }
+
+            } while (!Equals(newStudent, ""));
+
+            // Print class roster
+            Console.WriteLine("\nClass Roster");
+
+            foreach (KeyValuePair<double, string> student in students)
+            {
+                Console.WriteLine(student.Key + " - " + student.Value);
             }
         }
     }
+
 }
