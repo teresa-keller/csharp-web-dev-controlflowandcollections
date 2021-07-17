@@ -21,7 +21,7 @@ namespace DictionaryExercises
                 newStudent = double.Parse(input);
             
 
-                if(!Equals(newStudent, ""))
+                if(!Equals(newStudent, ' '))
                 {
                     Console.WriteLine("Student name: ");
                     string studentName = Console.ReadLine();
