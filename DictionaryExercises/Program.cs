@@ -18,10 +18,8 @@ namespace DictionaryExercises
             {
                 Console.WriteLine("Student ID: ");
                 string input = Console.ReadLine();
-                newStudent = double.Parse(input);
-            
-
-                if(!Equals(newStudent, ' '))
+                bool isNum = double.TryParse(input, out newStudent);
+                if (isNum)
                 {
                     Console.WriteLine("Student name: ");
                     string studentName = Console.ReadLine();
@@ -29,9 +27,12 @@ namespace DictionaryExercises
 
                     // Read in the newline before looping back
                     Console.ReadLine();
+                } else
+                {
+                    break;
                 }
 
-            } while (!Equals(newStudent, ""));
+            } while (!Equals(newStudent, " "));
 
             // Print class roster
             Console.WriteLine("\nClass Roster");
